@@ -24,7 +24,7 @@ This list is a work in progress. If you'd like to add to this list, feel free to
      
 * oncoNEM
  
-### Maximum likelihood phylogenetic methods
+### Phylogenies from maximum likelihood and probabilistic methods
 
 * [CellPhy](https://github.com/amkozlov/cellphy) - [2020 preprint](https://www.biorxiv.org/content/10.1101/2020.07.31.230292v1)
   * an implementation of RAxML-NG that was optimized for single cell tree inference by including parameters for allelic dropout and sequencing/PCR errors. CellPhy uses a mMrkov substitution model that follows the finite sites model, which is reported to work well under both finite sites and infinite sites assumptions.
@@ -52,7 +52,7 @@ This list is a work in progress. If you'd like to add to this list, feel free to
   * an implementation of SCITE that relaxes the infinite sites assumption by providing a model for recurrent mutations. *I think* this is to allow parallel or convergent evolution and does not model LOH or backmutations. In addition, it identifies doublets.
 
   
-### Distance methods
+### Phylogenies from distance-based methods
 * [DENDRO](https://github.com/zhouzilu/DENDRO) - [R]
     * A very lean R package to compute maximum parsimony trees from expressed SNVs in scRNA-seq data
     * DENDO implements a distance kernel based on a beta-binomial model which they suggest mitigates the impact of differential expression on tree topology.
@@ -62,7 +62,7 @@ This list is a work in progress. If you'd like to add to this list, feel free to
     
 * TNT
 
-## prospective lineage tracing with synthetic reporters
+## Methods designed for synthetic lineage reporter systems
 
 ### phylogenetic approaches
 
@@ -72,7 +72,10 @@ This list is a work in progress. If you'd like to add to this list, feel free to
 * [Cassiopeia](www.github.com/YosefLab/Cassiopeia) - 
     * Cassiopeia includes five phylogenetic algorithms, a greedy multi-state compatibility algorithm, an exact Steiner-tree solver, a hybrid of those two, Neighbor-Joining, and Camin-Sokal Maximum Parsimony.
     
-### Tree Visualizaton
+* [CellTagR](https://github.com/morris-lab/CellTagR) - R - 
+    * full fastq to network pipeline for cellTag constructs (Samantha Morris's lab). Since the barcodes are not mutable, clones are inferred by computing the Jaccard similarities between cells based on the UMI counts of cellTags. Clones are defined when the correlations within a clone exceeds R^2>0.7
+    
+## Phylogenetic Tree Visualizaton
   
   * [ETE3](https://github.com/etetoolkit/ete) - python
   * [ggtree](https://guangchuangyu.github.io/software/ggtree/) - R
